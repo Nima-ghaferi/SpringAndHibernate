@@ -1,7 +1,11 @@
 package com.nemo.mvcdemo;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.Locale;
 
 @Controller
 public class HelloWorldController {
@@ -13,6 +17,15 @@ public class HelloWorldController {
 
     @RequestMapping("process-form")
     public String processForm() {
+        return "hello-world";
+    }
+
+    @RequestMapping("process-form-v2")
+    public String letsShoutDude (HttpServletRequest req, Model model) {
+        String name = req.getParameter("studentName");
+        name = name.toUpperCase();
+        String result = "Yo! " + name;
+        model.addAttribute("message", result);
         return "hello-world";
     }
 }
