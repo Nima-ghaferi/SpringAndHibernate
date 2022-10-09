@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: nima
   Date: 10/9/2022 AD
-  Time: 16:58
+  Time: 17:34
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,8 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h2>Spring MVC Demo - Home Page</h2>
-    <hr>
-    <a href="show-form">Hello World Form</a>
+    <h2>Hello World From Spring MVC</h2>
+<h3>Student name: ${param.studentName}</h3>
 </body>
 </html>
