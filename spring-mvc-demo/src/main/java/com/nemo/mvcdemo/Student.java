@@ -1,11 +1,20 @@
 package com.nemo.mvcdemo;
 
+import java.util.HashMap;
+
 public class Student {
     private String firstName;
     private String lastName;
     private String country;
 
+    private HashMap<String, String> countryOptions;
+
     public Student() {
+        countryOptions = new HashMap<>();
+        countryOptions.put("BR", "Brazil");
+        countryOptions.put("IR", "Iran");
+        countryOptions.put("US", "United States");
+        countryOptions.put("FR", "France");
     }
 
     public String getFirstName() {
@@ -30,5 +39,9 @@ public class Student {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public HashMap<String, String> getCountryOptions() {
+        return countryOptions;
     }
 }
