@@ -1,14 +1,17 @@
 package com.nemo.mvcdemo;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class Student {
     private String firstName;
     private String lastName;
     private String country;
 
-    private HashMap<String, String> countryOptions;
+    private Map<String, String> countryOptions;
     private String favoriteLanguage;
+
+    private Map<String, String> languageOptions;
 
     public Student() {
         countryOptions = new HashMap<>();
@@ -16,6 +19,13 @@ public class Student {
         countryOptions.put("IR", "Iran");
         countryOptions.put("US", "United States");
         countryOptions.put("FR", "France");
+
+        languageOptions = new HashMap<>();
+        languageOptions.put("C#", "C#");
+        languageOptions.put("Java", "Java");
+        languageOptions.put("Ruby", "Ruby");
+        languageOptions.put("PHP", "PHP");
+        languageOptions.put("JavaScript", "JavaScript");
     }
 
     public String getFirstName() {
@@ -42,7 +52,7 @@ public class Student {
         this.country = country;
     }
 
-    public HashMap<String, String> getCountryOptions() {
+    public Map<String, String> getCountryOptions() {
         return countryOptions;
     }
 
@@ -52,5 +62,9 @@ public class Student {
 
     public void setFavoriteLanguage(String favoriteLanguage) {
         this.favoriteLanguage = favoriteLanguage;
+    }
+
+    public Map<String, String> getLanguageOptions() {
+        return languageOptions;
     }
 }
