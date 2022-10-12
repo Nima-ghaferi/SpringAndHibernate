@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: nima
@@ -17,6 +18,14 @@
     Country: ${student.country}
     <br/>
     Favorite Language: ${student.favoriteLanguage}
+    <br/>
+    Operating Systems:
+    <br/>
+    <ul>
+        <c:forEach var="temp" items="${student.operatingSystems}">
+            <li>${temp}</li>
+        </c:forEach>
+    </ul>
 </h2>
 </body>
 </html>

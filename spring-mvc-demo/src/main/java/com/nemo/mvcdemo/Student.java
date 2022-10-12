@@ -7,11 +7,10 @@ public class Student {
     private String firstName;
     private String lastName;
     private String country;
-
     private Map<String, String> countryOptions;
     private String favoriteLanguage;
-
     private Map<String, String> languageOptions;
+    private String[] operatingSystems;
 
     public Student() {
         countryOptions = new HashMap<>();
@@ -66,5 +65,13 @@ public class Student {
 
     public Map<String, String> getLanguageOptions() {
         return languageOptions;
+    }
+
+    public String[] getOperatingSystems() {
+        return operatingSystems;
+    }
+
+    public void setOperatingSystems(String[] operatingSystems) {
+        this.operatingSystems = operatingSystems;
     }
 }
