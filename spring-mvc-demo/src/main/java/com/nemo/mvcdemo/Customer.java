@@ -1,5 +1,7 @@
 package com.nemo.mvcdemo;
 
+import com.nemo.mvcdemo.validation.CourseCode;
+
 import javax.validation.constraints.*;
 
 public class Customer {
@@ -16,6 +18,9 @@ public class Customer {
 
     @Pattern(regexp = "^[a-zA-Z\\d]{5}", message = "Only 5 characters")
     private String postalCode;
+
+    @CourseCode(value = "NEMO", message = "must start with NEMO")
+    private String courseCode;
 
     public String getFirstName() {
         return firstName;
@@ -47,5 +52,13 @@ public class Customer {
 
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
+    }
+
+    public String getCourseCode() {
+        return courseCode;
+    }
+
+    public void setCourseCode(String courseCode) {
+        this.courseCode = courseCode;
     }
 }
