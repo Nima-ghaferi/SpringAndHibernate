@@ -1,4 +1,4 @@
-package com.nemo.hibernatetoturial.entity;
+package com.nemo.hibernate.demo.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

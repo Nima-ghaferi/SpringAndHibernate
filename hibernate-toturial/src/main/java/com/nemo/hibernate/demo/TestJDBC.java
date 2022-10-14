@@ -1,4 +1,4 @@
-package com.nemo.hibernatetoturial;
+package com.nemo.hibernate.demo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
