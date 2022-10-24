@@ -22,10 +22,11 @@ public class EagerLazyDemo {
             int id = 1;
             Instructor instructor = session.get(Instructor.class, id);
             System.out.println("Instructor: " + instructor);
-            System.out.println("Courses: "+ instructor.getCourses());
 
+            session.getTransaction().commit();//Close the connection
+
+            System.out.println("Courses: "+ instructor.getCourses());
             instructor.getCourses().stream().forEach(course -> System.out.println(course));
-            session.getTransaction().commit();
             System.out.println("Done!");
         } finally {
             session.close();
