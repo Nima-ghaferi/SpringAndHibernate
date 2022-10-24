@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="hb-03-one-to-many:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>hb-03-one-to-many</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="hibernate-toturial-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="hb-03-one-to-many:war exploded" />
+    </root>
+  </artifact>
+</component>
