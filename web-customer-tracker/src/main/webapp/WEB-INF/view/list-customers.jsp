@@ -34,11 +34,15 @@
                     <c:url var="updateLink" value="update">
                         <c:param name="id" value="${customer.id}"/>
                     </c:url>
+                    <c:url var="deleteLink" value="delete">
+                        <c:param name="id" value="${customer.id}"/>
+                    </c:url>
                     <tr>
                         <td>${customer.firstName}</td>
                         <td>${customer.lastName}</td>
                         <td>${customer.email}</td>
-                        <td><a href="${updateLink}">Update</a></td>
+                        <td><a href="${updateLink}">Update</a> | <a href="${deleteLink}"
+                                                                    onclick="if(!confirm('Are you sure?')) return false;">Delete</a></td>
                     </tr>
                 </c:forEach>
             </table>
