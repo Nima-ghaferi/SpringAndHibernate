@@ -1,10 +1,10 @@
-package com.nemo.springdemo.dao;
+package com.nemo.springdemo.service;
 
 import com.nemo.springdemo.entity.Customer;
 
 import java.util.List;
 
-public interface CustomerDAO {
+public interface CustomerService {
     List<Customer> getCustomers();
 
     void saveCustomer(Customer customer);
